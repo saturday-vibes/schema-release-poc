@@ -26,7 +26,8 @@
           "enum": [
             "api",
             "worker",
-            "cron"
+            "cron",
+            "agent"
           ],
           "title": "Component type"
         },

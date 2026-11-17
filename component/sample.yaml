@@ -5,4 +5,4 @@ component:
   description: Handles checkout requests # optional
   tags: [checkout, payments] # optional
 
-schema_version: v1.3.0 # x-release-please-version
+schema_version: v1.3.1 # x-release-please-version

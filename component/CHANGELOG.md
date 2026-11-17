@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.3.0...component-v1.3.1) (2026-11-17)
+
+### Bug Fixes
+
+* reject duplicate component tags
+
 ## [1.3.0](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.2.0...component-v1.3.0) (2026-11-17)
 
 ### Features

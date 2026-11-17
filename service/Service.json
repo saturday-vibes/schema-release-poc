@@ -28,6 +28,10 @@
             2,
             3
           ]
+        },
+        "slack_channel": {
+          "type": "string",
+          "pattern": "^#[a-z0-9_-]+$"
         }
       },
       "additionalProperties": false

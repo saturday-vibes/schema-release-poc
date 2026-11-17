@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.3](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.4.2...component-v1.4.3) (2026-11-17)
+
+### Bug Fixes
+
+* require lowercase component tags
+
 ## [1.4.2](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.4.1...component-v1.4.2) (2026-11-17)
 
 ### Bug Fixes

@@ -6,4 +6,4 @@ component:
   tags: [checkout, payments] # optional
   dependencies: [payments-db] # optional
 
-schema_version: v1.4.2 # x-release-please-version
+schema_version: v1.4.3 # x-release-please-version

@@ -43,7 +43,8 @@
         "tags": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
           },
           "uniqueItems": true,
           "maxItems": 10

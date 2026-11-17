@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.3](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.2...component-v1.1.3) (2026-11-17)
+
+### Bug Fixes
+
+* allow descriptions up to 500 characters
+
 ## [1.1.2](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.1...component-v1.1.2) (2026-11-17)
 
 ### Bug Fixes

@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.4...component-v1.2.0) (2026-11-17)
+
+### Features
+
+* add cron component type
+
 ## [1.1.4](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.3...component-v1.1.4) (2026-11-17)
 
 ### Bug Fixes

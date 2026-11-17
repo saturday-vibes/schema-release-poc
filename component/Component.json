@@ -18,22 +18,26 @@
         "name": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9-]*$",
-          "maxLength": 63
+          "maxLength": 63,
+          "title": "Component name"
         },
         "type": {
           "type": "string",
           "enum": [
             "api",
             "worker"
-          ]
+          ],
+          "title": "Component type"
         },
         "owner": {
           "type": "string",
-          "pattern": "^team-[a-z0-9-]+$"
+          "pattern": "^team-[a-z0-9-]+$",
+          "title": "Owning team"
         },
         "description": {
           "type": "string",
-          "maxLength": 500
+          "maxLength": 500,
+          "title": "Description"
         }
       },
       "additionalProperties": false

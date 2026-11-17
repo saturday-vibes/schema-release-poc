@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.4](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.3...component-v1.1.4) (2026-11-17)
+
+### Bug Fixes
+
+* add titles to component fields
+
 ## [1.1.3](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.2...component-v1.1.3) (2026-11-17)
 
 ### Bug Fixes

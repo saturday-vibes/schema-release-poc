@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.2](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.1...component-v1.1.2) (2026-11-17)
+
+### Bug Fixes
+
+* require owner to be a team-* handle
+
 ## [1.1.1](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.0...component-v1.1.1) (2026-11-17)
 
 ### Bug Fixes

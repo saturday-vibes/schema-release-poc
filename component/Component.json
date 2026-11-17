@@ -28,7 +28,8 @@
           ]
         },
         "owner": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^team-[a-z0-9-]+$"
         },
         "description": {
           "type": "string",

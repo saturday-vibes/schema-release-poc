@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.2.0...component-v1.3.0) (2026-11-17)
+
+### Features
+
+* add optional tags to component
+
 ## [1.2.0](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.1.4...component-v1.2.0) (2026-11-17)
 
 ### Features

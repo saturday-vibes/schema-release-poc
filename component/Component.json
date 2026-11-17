@@ -39,6 +39,12 @@
           "type": "string",
           "maxLength": 500,
           "title": "Description"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "additionalProperties": false

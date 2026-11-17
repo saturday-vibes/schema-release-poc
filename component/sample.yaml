@@ -3,5 +3,6 @@ component:
   type: api # api, worker or cron
   owner: team-payments
   description: Handles checkout requests # optional
+  tags: [checkout, payments] # optional
 
-schema_version: v1.2.0 # x-release-please-version
+schema_version: v1.3.0 # x-release-please-version

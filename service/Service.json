@@ -2,11 +2,17 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Service",
   "type": "object",
-  "required": ["service", "schema_version"],
+  "required": [
+    "service",
+    "schema_version"
+  ],
   "properties": {
     "service": {
       "type": "object",
-      "required": ["name", "team"],
+      "required": [
+        "name",
+        "team"
+      ],
       "properties": {
         "name": {
           "type": "string",
@@ -14,6 +20,14 @@
         },
         "team": {
           "type": "string"
+        },
+        "tier": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3
+          ]
         }
       },
       "additionalProperties": false

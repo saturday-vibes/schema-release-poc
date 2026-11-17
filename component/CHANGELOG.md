@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.1](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.4.0...component-v1.4.1) (2026-11-17)
+
+### Bug Fixes
+
+* reject duplicate dependencies
+
 ## [1.4.0](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.3.2...component-v1.4.0) (2026-11-17)
 
 ### Features

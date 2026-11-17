@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.2](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.4.1...component-v1.4.2) (2026-11-17)
+
+### Bug Fixes
+
+* allow dots in dependency names
+
 ## [1.4.1](https://github.com/saturday-vibes/schema-release-poc/compare/component-v1.4.0...component-v1.4.1) (2026-11-17)
 
 ### Bug Fixes

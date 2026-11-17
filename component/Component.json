@@ -17,7 +17,8 @@
       "properties": {
         "name": {
           "type": "string",
-          "pattern": "^[a-z][a-z0-9-]*$"
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "maxLength": 63
         },
         "type": {
           "type": "string",

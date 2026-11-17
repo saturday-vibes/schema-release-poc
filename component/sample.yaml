@@ -1,0 +1,6 @@
+component:
+  name: checkout-api
+  type: api # api or worker
+  owner: team-payments
+
+schema_version: v1.0.0 # x-release-please-version

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "separate-pull-requests": false,
+  "include-component-in-tag": true,
+  "tag-separator": "-",
+  "initial-version": "1.0.0",
+  "packages": {
+    "component": {
+      "release-type": "simple",
+      "component": "component",
+      "package-name": "component",
+      "extra-files": ["sample.yaml"]
+    },
+    "service": {
+      "release-type": "simple",
+      "component": "service",
+      "package-name": "service",
+      "extra-files": ["sample.yaml"]
+    },
+    ".": {
+      "release-type": "simple",
+      "component": "bundle",
+      "package-name": "bundle",
+      "version-file": "bundle/version.txt",
+      "changelog-path": "bundle/CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "bundle/package.json",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+name: pull-request-checks
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+
+jobs:
+  pull-request-title-check:
+    name: PR Title Check
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login != 'github-actions[bot]'
+    steps:
+      - uses: Slashgear/action-check-pr-title@76166c63ec0b25cdbe693e5e972e83ca186313fb # v6.0.0
+        with:
+          regexp: '^(feat|fix|chore|docs|ci|refactor|test|perf|build|style|revert)(\(.*\))?(!)?:'
+          helpMessage: 'PR title must follow conventional commits: type(scope): description. Example: feat(CEA-12345): add new feature'
+
+  schema-check:
+    name: Schema Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Schemas are valid JSON
+        run: jq empty component/Component.json service/Service.json
+      - name: Bundle builds from tags
+        run: scripts/build-bundle.sh dist 0.0.0-pr

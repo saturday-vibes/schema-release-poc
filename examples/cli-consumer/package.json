@@ -1,0 +1,9 @@
+{
+  "name": "cli-consumer",
+  "private": true,
+  "dependencies": {
+    "@test-org-th/sample-schemas": "latest",
+    "ajv": "^8.17.1",
+    "js-yaml": "^4.1.0"
+  }
+}

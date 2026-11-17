@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Component",
+  "type": "object",
+  "required": ["component", "schema_version"],
+  "properties": {
+    "component": {
+      "type": "object",
+      "required": ["name", "type", "owner"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["api", "worker"]
+        },
+        "owner": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^v\\d+\\.\\d+\\.\\d+$"
+    }
+  }
+}

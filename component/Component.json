@@ -18,6 +18,10 @@
         },
         "owner": {
           "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200
         }
       },
       "additionalProperties": false

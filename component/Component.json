@@ -45,7 +45,8 @@
           "items": {
             "type": "string"
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "maxItems": 10
         }
       },
       "additionalProperties": false

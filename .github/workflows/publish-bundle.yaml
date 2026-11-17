@@ -1,0 +1,71 @@
+name: publish-bundle
+
+on:
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing bundle release tag to publish, e.g. bundle-v1.1.0
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      - name: Resolve the bundle tag
+        id: tag
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          TAG=${INPUT_TAG:-bundle-v$(jq -r .version bundle/package.json)}
+          git rev-parse -q --verify "refs/tags/$TAG" >/dev/null || {
+            echo "::error::tag $TAG does not exist"
+            exit 1
+          }
+          git checkout -q "$TAG"
+          VERSION=$(jq -r .version bundle/package.json)
+          if [ "bundle-v$VERSION" != "$TAG" ]; then
+            echo "::error::$TAG has bundle/package.json version $VERSION"
+            exit 1
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Publishing $TAG"
+      - name: Get node version
+        id: nvm
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+          registry-url: https://registry.npmjs.org
+      - name: Build bundle from tags
+        run: |
+          scripts/build-bundle.sh dist "${{ steps.tag.outputs.version }}"
+          jq -e '.component and .service' dist/schemas/index.json >/dev/null || {
+            echo "::error::bundle needs at least one component and one service schema"
+            exit 1
+          }
+      - name: Publish to npm
+        working-directory: dist
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm pack --dry-run
+          npm publish --access public
+      - name: Attach the bundle to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          (cd dist && npm pack --pack-destination ..)
+          gh release upload "${{ steps.tag.outputs.tag }}" ./*.tgz --clobber

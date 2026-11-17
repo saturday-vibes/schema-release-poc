@@ -47,6 +47,13 @@
           },
           "uniqueItems": true,
           "maxItems": 10
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          }
         }
       },
       "additionalProperties": false

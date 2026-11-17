@@ -1,7 +1,7 @@
 service:
   name: payments
   team: team-payments
-  tier: 2 # optional, 1-3
+  tier: 2 # optional, 1-4
   slack_channel: "#team-payments" # optional
 
-schema_version: v1.2.0 # x-release-please-version
+schema_version: v1.2.1 # x-release-please-version

@@ -2,5 +2,6 @@ component:
   name: checkout-api
   type: api # api or worker
   owner: team-payments
+  description: Handles checkout requests # optional
 
-schema_version: v1.0.0 # x-release-please-version
+schema_version: v1.1.0 # x-release-please-version
